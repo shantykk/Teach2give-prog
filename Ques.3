@@ -1,0 +1,19 @@
+# Question: How to write a Python function to check whether a string is pangram or not. (Assume
+the string passed in does not have any punctuation)
+
+# 
+# Here's the solution:
+
+def is_pangram(s):
+    """Function to check if a string is a pangram."""
+    alphabet = set("abcdefghijklmnopqrstuvwxyz")
+    s = s.lower().replace(" ", "")
+    return alphabet.issubset(set(s))
+
+# Example usage
+if __name__ == "__main__":
+    sentence = "The quick brown fox jumps over a lazy dog"
+    if is_pangram(sentence):
+        print(f'"{sentence}" is a pangram.')
+    else:
+        print(f'"{sentence}" is not a pangram.')

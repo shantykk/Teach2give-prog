@@ -1,0 +1,17 @@
+# Question: How to write a program that takes an integer as input and returns an integer with
+reversed digit ordering.
+# 
+# Here's the solution:
+
+def reverse_integer(n):
+    """Function to reverse the digits of an integer."""
+    sign = -1 if n < 0 else 1
+    reversed_num = int(str(abs(n))[::-1])
+    return sign * reversed_num
+
+# Example usage
+if __name__ == "__main__":
+    print(reverse_integer(500))  # Output: 5
+    print(reverse_integer(-56))  # Output: -65
+    print(reverse_integer(-90))  # Output: -9
+    print(reverse_integer(91))   # Output: 19
